@@ -8,4 +8,8 @@ const arr = [1, 2, 3, 4, 5];
 const ok = arr.map((x) => {
   return x * 2;
 });
-console.log(ok);
+// .filter((x) => {
+//   return x > 5;
+// });
+const bye = ok.filter((x) => x > 6);
+console.log(bye.reduce((a, b) => a + b, 0));
