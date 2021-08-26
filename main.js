@@ -1,25 +1,11 @@
-console.log("Hello");
-
-const arr = [1, 6, 3, 4, 5];
-
-(a = 0), (b = 1); // 1
-(a = 1), (b = 2); // 2
-
-// function double(x) {
-//   return x * 2;
-// }
-const ok = arr.map((x) => {
-  return x * 2;
+const users = [
+  { name: "Venkatesh", last: "Prasad", age: 23 },
+  { name: "Elon", last: "Musk", age: 25 },
+  { name: "Jeff", last: "Bezoz", age: 27 },
+];
+// console.log(users.map((data) => data.name + " " + data.last));
+// console.log(users.filter((data) => data.age === 23).map((data) => data.age));
+const ok = users.filter((data) => {
+  return data.age < 26;
 });
-// .filter((x) => {
-//   return x > 5;
-// });
-const bye = ok.filter((x) => x > 6);
-console.log(
-  arr.reduce((a, b) => {
-    if (b > a) {
-      a = b;
-    }
-    return a;
-  }, 0)
-);
+console.log(ok.map((data) => data.name));
