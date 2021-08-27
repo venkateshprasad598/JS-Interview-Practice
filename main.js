@@ -1,49 +1,24 @@
-const myName = [
-  { name: "v", id: 1 },
-  { name: "e", id: 2 },
-  { name: "n", id: 3 },
-];
+class Person {
+  constructor(first, last) {
+    (this.first = first), (this.last = last);
+  }
 
-function getName() {
-  setTimeout(() => {
-    let output = "";
-    for (let i = 0; i < myName.length; i++) {
-      output = myName[i].name;
-      console.log(output);
-    }
-  }, 1000);
+  static myName() {
+    return console.log("Hello");
+  }
+  hello() {
+    return "Hello";
+  }
 }
 
-// function addName(x, callback) {
-//   setTimeout(() => {
-//     myName.push(x);
-//     callback();
-//   }, 2000);
-// }
-// addName({ name: "a", id: 4 }, getName);
+let me = new Person();
+console.log(me);
 
-const addName = (x) => {
-  return new Promise((resolve, rejeect) => {
-    setTimeout(() => {
-      myName.push(x);
-      let condition = true;
-      switch (condition) {
-        case true:
-          resolve();
-          break;
-        case false:
-          rejeect("error");
-      }
-    }, 2000);
-  });
-};
-
-// addName({ name: "a", id: 4 })
-//   .then(getName)
-//   .catch((error) => console.log(error));
-
-async function asyncFunc() {
-  await addName({ name: "a", id: 4 });
-  getName();
+class newPerson extends Person {
+  constructor(first, last, age, num) {
+    super(first, last);
+    (this.age = age), (this.num = num);
+  }
 }
-asyncFunc();
+const newme = new newPerson("Venku", "Prasad", 23, 8);
+console.log(newme.hello());
