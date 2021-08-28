@@ -5,11 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .div{
+            height: 600px;
+            background-color: aqua;
+        }
+        .div > img{
+           width: 300px;
+            /* transition: transform 500ms; */
+            /* transition-property: width; */
+            /* transition-duration: 1s; */
+            /* transition-timing-function: ease-in; */
+            /* transition: transform 500ms; */
+             animation: venku 2s ease-in 3 alternate;
+             /* animation-name: venku;
+             animation-duration: 2s;
+             animation-timing-function: ease-in;
+             animation-iteration-count: 8;
+             animation-direction: alternate; */
+        }
+        @keyframes venku {
+            0%{
+                width: 0px;
+            }
+            50%{
+                width: 600px;
+            }
+            100%{
+                width:1000px;            }
+        }
+        .div > h1{
+            transform: scale(1.08);
+        }
+      .div > img:hover{
+            /* width: 360px; */
+            /* transform: scale(1.8); */
+        }
+    </style>
 </head>
 <body>
     <input type="text" placeholder="Enter a number" id="one">
     <input type="text" placeholder="Enter a number" id="two"><br><br>
     <button type="submit">sum</button>
+    <div class="div">
+        <img src="https://static.highsnobiety.com/thumbor/usHtk4eLctk9Z-tvFWlXHxPcdkI=/1600x1067/static.highsnobiety.com/wp-content/uploads/2021/04/30114300/disaster-girl-main.jpg" alt="">
+        <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, illum!</h1>
+    </div>
     <script src= "main.js"></script>
 </body>
 </html>
