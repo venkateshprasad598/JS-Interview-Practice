@@ -1,4 +1,18 @@
 // DSA ********************************************************************
+//Largest Among Two
+function max(a, b, c) {
+  // var max = Math.max(a, b);
+  // console.log(max);
+  if (a >= b && a >= c) {
+    console.log(a);
+  } else if (b > a && b > c) {
+    console.log(b);
+  } else if (c > a && c > b) {
+    console.log(c);
+  }
+}
+max(10, 10, 10);
+
 //CONDITONALS
 var hour = 9;
 var message = "";
